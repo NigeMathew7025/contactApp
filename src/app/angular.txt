@@ -1,0 +1,32 @@
+             Angular - front end development framework
+
+
+Basic Commands
+
+1.create project - ng new (project-name)
+2.Run project - ng serve --open(ng s -o)
+3.Generating components:ng g c (component-name)
+4.Angular Services - ng g s service-folder/service-name
+
+Basic Building Blocks
+
+1.module- used to import 3rd party libraries
+2.components-used to create html page(html,css,ts)
+3.selector-it will replace the html page for that component
+4.Angular Services-Reusable code that can share between components
+5.Asynchroonous function- rxjs
+6.observable- 
+       suscribe(call back)
+    7.to get http methods
+ 8.   dependency Injection- perform inside constructor
+    syntax: access specifier variable-name:class-name
+ 9.Data binding - data sharing inside a componenet
+     -one way binding
+      -componenet (ts)to view(html)
+       --string interpolation- [[variable-name]]
+       --property binding - [attribute]="property-name
+10.Directives - DOM Manipulation
+ -Component Directives
+ -structural Directives - to add/ remove html element based on conditions or length of an array
+    -*ngif="condition"
+   -*ngFor="Let variable name of array-name"

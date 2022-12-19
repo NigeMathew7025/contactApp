@@ -1,0 +1,43 @@
+<div class="container mt-4 title">
+    <div class="row">
+      
+       <div class="col">
+
+           <h1>
+
+             <i class="fa-solid fa-user-plus"></i>&nbsp;
+             View contact page
+           </h1>
+           <p style="text-align: justify;">
+               This is dummy data Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor et commodi accusamus
+               suscipit rem! Possimus sint nihil provident quasi velit ratione fugiat modi dolor. Suscipit, ipsam?
+               Molestias maiores est doloremque.
+           </p>
+       </div>
+       </div>
+                    <!-- <pre> 
+                   {{contact | json}}
+                </pre>  -->
+       <!-- view contact details -->
+       <div class="container mt-4">
+         <div class="row border p-5 align-items-center">
+            <div class="col-md-4">
+                <!-- contaqctg image -->
+                <img  width="300px" [src]="contact.photo" alt="" class="contact_image mt-2">
+               <br>
+               <a routerLink="/" class="btn btn-warning"><i class="fa-solid fa-circle-left"></i> Go Back</a>
+            </div>
+            <div class="col-md-8">
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">name: <b>{{contact.name}}</b></li>
+                    <li class="list-group-item">Email:<b>{{contact.email}}</b></li>
+                    <li class="list-group-item">mobilenumber: <b>{{contact.mobile}}</b></li>
+                    <li class="list-group-item">company: <b>{{contact.company}}</b></li>
+                    <li class="list-group-item">Title:<b>{{contact.title}}</b></li>
+                    <li class="list-group-item">Group:<b>{{groupName}}</b></li>
+
+                  </ul>
+            </div>
+         </div>
+       </div>
+</div>       
