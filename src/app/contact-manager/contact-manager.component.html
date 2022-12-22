@@ -44,12 +44,14 @@
                                         </ul>
                                     </div>
                                     <div class="col-md-1 d-flex flex-column justify-content-center align-items-center">
+                                       <!-- view -->
                                         <a href="" routerLink="/contacts/view/{{contact.id}}" class="btn btn-warning"><i
                                                 class="fa-solid fa-eye"></i></a>
-                                        <a href="" routerLink="/contacts/edit/:contactId" class="btn btn-success mt-1"><i
+                                                <!-- edit contact -->
+                                        <a href="" routerLink="/contacts/edit/{{contact.id}}" class="btn btn-success mt-1"><i
                                                 class="fa-sharp fa-solid fa-pen"></i></a>
                                         <!-- delete -->
-                                        <button class="btn btn-danger mt-1"><i class="fa-regular fa-trash-can"></i></button>
+                                        <button (click)="deleteContact(contact.id)" class="btn btn-danger mt-1"><i class="fa-regular fa-trash-can"></i></button>
     
                                     </div>
                                 </div>

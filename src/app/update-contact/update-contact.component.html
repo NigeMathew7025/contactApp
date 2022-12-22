@@ -6,14 +6,14 @@
            <h1>
 
              <i class="fa-solid fa-user-plus"></i>&nbsp;
-             Add Contact PAge
+             Update Contact Page
            </h1>
            <p style="text-align: justify;">
                This is dummy data Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor et commodi accusamus
                suscipit rem! Possimus sint nihil provident quasi velit ratione fugiat modi dolor. Suscipit, ipsam?
                Molestias maiores est doloremque.
            </p>
-
+<!-- <pre>{{groups | json}}</pre> -->
        </div>
        <!-- add contactform -->
        <div class="container">
@@ -21,39 +21,39 @@
                <div class="col-md-4">
                    <form class="border p-3 rounded">
                        <div class="mb-2">
-                           <input type="text" class="form-control" placeholder="name">
+                           <input name="cname" [(ngModel)]="contact.name" type="text" class="form-control" placeholder="name">
                        </div>
                        <div class="mb-2">
-                           <input type="text" class="form-control" placeholder="photo url">
+                           <input name="curl" [(ngModel)]="contact.photo" type="text" class="form-control" placeholder="photo url">
                        </div>
                        <div class="mb-2">
-                           <input type="text" class="form-control" placeholder="Email Id">
+                           <input name="cemail" [(ngModel)]="contact.email" type="text" class="form-control" placeholder="Email Id">
                        </div>
                        <div class="mb-2">
-                           <input type="text" class="form-control" placeholder="Mobile Number">
+                           <input name="cmobile" [(ngModel)]="contact.mobile" type="text" class="form-control" placeholder="Mobile Number">
                        </div>
                        <div class="mb-2">
-                           <input type="text" class="form-control" placeholder="company">
+                           <input name="company" [(ngModel)]="contact.company" type="text" class="form-control" placeholder="company">
                        </div>
                        <div class="mb-2">
-                           <input type="text" class="form-control" placeholder="Title">
+                           <input name="ctitle" [(ngModel)]="contact.title" type="text" class="form-control" placeholder="Title">
                        </div>
 
                        <div class="mb-2">
-                           <select name="" id="" class="form-control">
+                           <select name="groupId" [(ngModel)]="contact.groupId" id="" class="form-control">
                                <option value="" selected hidden disabled>Select a group</option>
-                               <option value="">family</option>
-                               <option value="">friends</option>
+                            <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
+                               
                            </select>
                        </div>
                         <div class="mb-2">
-                           <input type="button" value="create" class="btn btn-success">
+                           <input type="button" value="Update" (click)="updateContact()" class="btn btn-success">
                            <a routerLink="/" class="btn btn-danger ms-3">close</a>
                         </div>
                    </form>
                </div>
                <div class="col-md-4">
-                   <img src="https://www.iconbolt.com/preview/facebook/ionicons-outline/person-circle.svg" alt="" class="contact_image mt-2">
+                   <img [src]=contact.photo alt="" class="contact_image mt-2">
                </div>
            </div>
        </div>

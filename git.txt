@@ -1,0 +1,7 @@
+cmd 
+2. git status
+3.git add .
+4.again git status
+5. git commit -m "contact v2(any message can be written)"
+6.git push origin master
+7.open git look in repository
